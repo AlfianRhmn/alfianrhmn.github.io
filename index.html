@@ -34,9 +34,21 @@
     }
 
     .image-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: #224c8f; /* blue-500 */
+      color: #f1f5f9;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      margin-top: 0.5rem;
     }
 
     h1 {
@@ -83,6 +95,7 @@
       h1 {
         font-size: 1.5rem;
       }
+
     }
   </style>
 </head>
@@ -93,29 +106,19 @@
     </div>
     <h1>About Me</h1>
     <p>
-      Hi! I am Alfian Rahman Riyadi, a student at SMKN 11 Semarang in Indonesia, currently studying Game Development.
-      More information at <a href="https://drive.google.com/file/d/1DKvaovDQEeAeTLSi-oOniLBCGWN15wyI/view?usp=drive_link" target="_blank">My CV</a>.
+      Hi! I am Alfian Rahman Riyadi, a student at SMKN 11 Semarang in Indonesia, currently studying Game Development. <br>
+      <br> More information at : <br>
+      <a class="btn" href="https://drive.google.com/file/d/1DKvaovDQEeAeTLSi-oOniLBCGWN15wyI/view?usp=drive_link" target="_blank">My CV</a>
     </p>
 
-    <h1>Skills</h1>
-    <ul>
-      <li>English</li>
-      <li>Unity</li>
-      <li>Blender and Aseprite</li>
-    </ul>
-
     <h1>Projects</h1>
-    <ul>
-      <li>
-        <a href="https://drive.google.com/drive/folders/1Qxi3WjQrDKqm0uj4uY4U9nPlUBeO4lCA?hl=id" target="_blank">
-          Google Drive Unity Projects
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/AlfianRhmn" target="_blank">
-            GitHub Projects
-        </a>
-      </li>
+      <a class="btn" href="https://github.com/AlfianRhmn" target="_blank">
+        GitHub Profiles
+      </a>
+      <br>
+      <a class="btn" href="https://drive.google.com/drive/folders/1Qxi3WjQrDKqm0uj4uY4U9nPlUBeO4lCA?hl=id" target="_blank">
+        Google Drive for Unity Projects
+      </a>   
     </ul>
   </div>
 </body>
