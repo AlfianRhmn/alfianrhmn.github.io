@@ -51,6 +51,33 @@
       margin-top: 0.5rem;
     }
 
+    .center-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #fbbf24;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .gallery img {
+      width: 150px;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
     h1 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
@@ -104,16 +131,23 @@
     <div class="image-container">
       <img src="me.jpeg" width="150px" height="auto" alt="Me">
     </div>
-    <h1>About Me</h1>
+
+    <h1 class="center-title">About Me</h1>
     <p>
       Hi! I am Alfian Rahman Riyadi, a student at SMKN 11 Semarang in Indonesia, currently studying Game Development. <br>
       <br> More information at : <br>
       <a class="btn" href="https://drive.google.com/file/d/1DKvaovDQEeAeTLSi-oOniLBCGWN15wyI/view?usp=drive_link" target="_blank">My CV</a>
     </p>
 
-    <h1>Projects</h1>
+    <h1 class="center-title">Gallery</h1>
+      <div class="gallery">
+        <img src="planet.png" alt="Planet">
+        <img src="rocket.png" alt="Rocket">
+      </div>
+
+    <h1 class="center-title">Links</h1>
       <a class="btn" href="https://github.com/AlfianRhmn" target="_blank">
-        GitHub Profiles
+        GitHub Profile
       </a>
       <br>
       <a class="btn" href="https://drive.google.com/drive/folders/1Qxi3WjQrDKqm0uj4uY4U9nPlUBeO4lCA?hl=id" target="_blank">
