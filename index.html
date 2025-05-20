@@ -9,140 +9,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0f172a;
-      color: #f1f5f9;
-      line-height: 1.6;
-      padding: 2rem;
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 2rem;
-      background-color: #1e293b;
-      border-radius: 1rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .image-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      background-color: #224c8f; /* blue-500 */
-      color: #f1f5f9;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-      margin-top: 0.5rem;
-    }
-
-    .center-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #fbbf24;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .gallery-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .gallery img {
-      width: 150px;
-      height: auto;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    .caption {
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
-      color: #38bdf8;
-      text-decoration: underline;
-      transition: color 0.3s ease;
-    }
-
-    .caption:hover {
-      color: #0ea5e9;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: #fbbf24;
-      border-bottom: 2px solid #334155;
-      padding-bottom: 0.5rem;
-    }
-
-    p {
-      margin-bottom: 1.5rem;
-    }
-
-    ul {
-      list-style-type: disc;
-      margin-left: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    a:hover {
-      color: #0ea5e9;
-    }
-
-    img {
-      border-radius: 50%;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
-
-      .container {
-        padding: 1.5rem;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <div class="container">
@@ -160,19 +28,19 @@
     <h1 class="center-title">Projects Gallery</h1>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="planet.png" alt="Planet">
+          <img src="planet.png" alt="Planet" onclick="openLightbox(this)">
           <a class="caption" href="https://drive.google.com/file/d/1o3AVYjZPXPE4PNKTEc4j4ABFDJvzkPLc/view?usp=drive_link" download="https://drive.google.com/file/d/1o3AVYjZPXPE4PNKTEc4j4ABFDJvzkPLc/view?usp=drive_link" target="_blank">Planet</a>
         </div>       
         <div class="gallery-item">
-          <img src="rocket.png" alt="Rocket">
+          <img src="rocket.png" alt="Rocket" onclick="openLightbox(this)">
           <a class="caption" href="https://drive.google.com/file/d/1kEQTnGUnjXDvAV6_Pr4U7vdrOuAtZLJG/view?usp=drive_link" download="https://drive.google.com/file/d/1kEQTnGUnjXDvAV6_Pr4U7vdrOuAtZLJG/view?usp=drive_link" target="_blank">Rocket</a>
         </div>                
         <div class="gallery-item">
-          <img src="window.png" alt="Window">
+          <img src="window.png" alt="Window" onclick="openLightbox(this)">
           <a class="caption" href="https://drive.google.com/file/d/1kyEgoSMeaFZmdGJP-MP5oYb_WvKNBSfq/view?usp=drive_link" download="https://drive.google.com/file/d/1kyEgoSMeaFZmdGJP-MP5oYb_WvKNBSfq/view?usp=drive_link" target="_blank">Window</a>
         </div>        
         <div class="gallery-item">
-          <img src="Screenshot 2025-05-19 145259.png" alt="Driving Around">
+          <img src="Screenshot 2025-05-19 145259.png" alt="Driving Around" onclick="openLightbox(this)">
           <a class="caption" href="https://github.com/AlfianRhmn/Driving-Around" download="https://github.com/AlfianRhmn/Driving-Around" target="_blank">Driving Around</a>
         </div>       
       </div>
@@ -186,6 +54,9 @@
         Google Drive for Unity Projects
       </a>   
     </ul>
+  </div>
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Full Image">
   </div>
 </body>
 </html>
