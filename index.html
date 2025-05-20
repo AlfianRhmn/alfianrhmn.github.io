@@ -4,57 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alfian Portfolio</title>
+
+  <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </head>
 <body>
   <div class="container">
+    
+    <!-- Profile Image -->
     <div class="image-container">
-      <img src="me.jpeg" width="150px" height="auto" alt="Me">
+      <img src="me.jpeg" width="150" alt="Me">
     </div>
 
+    <!-- About Section -->
     <h1 class="center-title">About Me</h1>
     <p>
-      Hi! I am Alfian Rahman Riyadi, a student at SMKN 11 Semarang in Indonesia, currently studying Game Development. <br>
-      <br> More information at : <br>
+      Hi! I am Alfian Rahman Riyadi, a student at SMKN 11 Semarang in Indonesia, currently studying Game Development. <br><br>
+      More information at:
+      <br>
       <a class="btn" href="https://drive.google.com/file/d/1DKvaovDQEeAeTLSi-oOniLBCGWN15wyI/view?usp=drive_link" target="_blank">My CV</a>
     </p>
 
+    <!-- Gallery Section -->
     <h1 class="center-title">Projects Gallery</h1>
-      <div class="gallery">
-        <div class="gallery-item">
-          <img src="planet.png" alt="Planet" onclick="openLightbox(this)">
-          <a class="caption" href="https://drive.google.com/file/d/1o3AVYjZPXPE4PNKTEc4j4ABFDJvzkPLc/view?usp=drive_link" download="https://drive.google.com/file/d/1o3AVYjZPXPE4PNKTEc4j4ABFDJvzkPLc/view?usp=drive_link" target="_blank">Planet</a>
-        </div>       
-        <div class="gallery-item">
-          <img src="rocket.png" alt="Rocket" onclick="openLightbox(this)">
-          <a class="caption" href="https://drive.google.com/file/d/1kEQTnGUnjXDvAV6_Pr4U7vdrOuAtZLJG/view?usp=drive_link" download="https://drive.google.com/file/d/1kEQTnGUnjXDvAV6_Pr4U7vdrOuAtZLJG/view?usp=drive_link" target="_blank">Rocket</a>
-        </div>                
-        <div class="gallery-item">
-          <img src="window.png" alt="Window" onclick="openLightbox(this)">
-          <a class="caption" href="https://drive.google.com/file/d/1kyEgoSMeaFZmdGJP-MP5oYb_WvKNBSfq/view?usp=drive_link" download="https://drive.google.com/file/d/1kyEgoSMeaFZmdGJP-MP5oYb_WvKNBSfq/view?usp=drive_link" target="_blank">Window</a>
-        </div>        
-        <div class="gallery-item">
-          <img src="Screenshot 2025-05-19 145259.png" alt="Driving Around" onclick="openLightbox(this)">
-          <a class="caption" href="https://github.com/AlfianRhmn/Driving-Around" download="https://github.com/AlfianRhmn/Driving-Around" target="_blank">Driving Around</a>
-        </div>       
+    <div class="gallery">
+      
+      <div class="gallery-item">
+        <img src="assets/planet.png" alt="Planet" onclick="openLightbox(this)">
+        <a class="caption" href="https://drive.google.com/file/d/1o3AVYjZPXPE4PNKTEc4j4ABFDJvzkPLc/view?usp=drive_link" download target="_blank">Planet</a>
       </div>
 
+      <div class="gallery-item">
+        <img src="assets/rocket.png" alt="Rocket" onclick="openLightbox(this)">
+        <a class="caption" href="https://drive.google.com/file/d/1kEQTnGUnjXDvAV6_Pr4U7vdrOuAtZLJG/view?usp=drive_link" download target="_blank">Rocket</a>
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/window.png" alt="Window" onclick="openLightbox(this)">
+        <a class="caption" href="https://drive.google.com/file/d/1kyEgoSMeaFZmdGJP-MP5oYb_WvKNBSfq/view?usp=drive_link" download target="_blank">Window</a>
+      </div>
+
+      <div class="gallery-item">
+        <img src="assets/Screenshot 2025-05-19 145259.png" alt="Driving Around" onclick="openLightbox(this)">
+        <a class="caption" href="https://github.com/AlfianRhmn/Driving-Around" target="_blank">Driving Around</a>
+      </div>
+
+    </div>
+
+    <!-- Links Section -->
     <h1 class="center-title">Links</h1>
-      <a class="btn" href="https://github.com/AlfianRhmn" target="_blank">
-        GitHub Profile
-      </a>
-      <br>
-      <a class="btn" href="https://drive.google.com/drive/folders/1Qxi3WjQrDKqm0uj4uY4U9nPlUBeO4lCA?hl=id" target="_blank">
-        Google Drive for Unity Projects
-      </a>   
-    </ul>
+    <a class="btn" href="https://github.com/AlfianRhmn" target="_blank">GitHub Profile</a>
+    <br>
+    <a class="btn" href="https://drive.google.com/drive/folders/1Qxi3WjQrDKqm0uj4uY4U9nPlUBeO4lCA?hl=id" target="_blank">Google Drive for Projects</a>
+  
   </div>
+
+  <!-- Lightbox -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="Full Image">
   </div>
