@@ -171,6 +171,25 @@ body.lightbox-open {
 }
 
 /* ============================
+   Font Awesome Icons
+============================ */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #38bdf8;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #0ea5e9;
+}
+
+/* ============================
    Responsive Design
 ============================ */
 @media (max-width: 600px) {
